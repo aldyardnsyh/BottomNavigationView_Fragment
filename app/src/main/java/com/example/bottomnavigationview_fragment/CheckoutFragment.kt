@@ -46,9 +46,8 @@ class CheckoutFragment : Fragment() {
             spinnerTkt.setSelection(0)
 
             btnBuy.setOnClickListener {
-                val selectedTicket = spinnerTkt.selectedItem.toString()
                 if (spinnerTkt.selectedItemPosition != 0) {
-                    val action = CheckoutFragmentDirections.actionCheckoutFragmentToTicketTypeFragment(selectedTicket)
+                    val action = CheckoutFragmentDirections.actionCheckoutFragmentToTicketTypeFragment()
 
                     findNavController().navigate(action)
                 } else {
