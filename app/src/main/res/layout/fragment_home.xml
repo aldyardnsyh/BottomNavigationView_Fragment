@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:orientation="vertical"
+    android:padding="40dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/txt_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Welcome to "
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/dark_blue"
+        />
+
+    <TextView
+        android:id="@+id/txt_homepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Home Page "
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/dark_blue"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_buy"
+        android:layout_marginTop="80sp"
+        android:background="@drawable/rounded_box"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Explore Destination"
+        />
+
+</LinearLayout>

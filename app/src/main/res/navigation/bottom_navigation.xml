@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/orderFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.bottomnavigationview_fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.example.bottomnavigationview_fragment.OrderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order">
+        <action
+            android:id="@+id/action_orderFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.bottomnavigationview_fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.bottomnavigationview_fragment.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_TicketTypeFragment"
+            app:destination="@id/TicketTypeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/TicketTypeFragment"
+        android:name="com.example.bottomnavigationview_fragment.TicketTypeFragment"
+        android:label="fragment_tickettype"
+        tools:layout="@layout/fragment_tickettype" />
+</navigation>
